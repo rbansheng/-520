@@ -1,0 +1,107 @@
+
+.feedback-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+    margin: 20px auto;
+}
+
+/* 标题样式 */
+.feedback-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* 表单组样式 */
+.feedback-container .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* 标签样式 */
+.feedback-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* 必填标识样式 */
+.feedback-container .required {
+    color: red;
+    margin-left: 5px;
+}
+
+/* 输入框和下拉列表样式 */
+.feedback-container input[type="text"], 
+.feedback-container select, 
+.feedback-container textarea {
+    width: 93%;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.feedback-container input[type="text"]:focus, 
+.feedback-container select:focus, 
+.feedback-container textarea:focus {
+    border-color: #62da98;
+}
+
+/* 错误信息样式 */
+.feedback-container .error {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    bottom: -18px;
+    left: 20px;
+}
+
+/* 提交按钮样式 */
+.feedback-container .btn {
+    width: 100%;
+    padding: 14px 40px;
+    background-color: #62da98;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-container .btn:hover {
+    background-color: #1aec4e;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    .feedback-container {
+        padding: 20px;
+    }
+
+    .feedback-container input[type="text"], 
+    .feedback-container select, 
+    .feedback-container textarea {
+        padding: 10px 15px;
+    }
+
+    .feedback-container .btn {
+        padding: 12px 30px;
+    }
+}
+
+/* 动画关键帧 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

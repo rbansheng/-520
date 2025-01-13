@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+
+        height: 500px;
+        overflow: scroll;
+
+      
+}
+
+ul {
+    list-style: none;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: all 0.5s;
+    background-image: linear-gradient(90deg, #5b4099,#fb83b7);
+}
+
+#wrapper .sidebar {
+    width: 220px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -220px;
+    bottom: 0;
+    background-color: #BE04A7;
+    overflow: hidden;
+}
+
+#wrapper button {
+    width: 40px;
+
+
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(../images/button.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 0;
+    outline: none;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.headSculpture {
+    width: 100%;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.headSculpture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 0 auto;
+    transform: translate(0,-135px);
+    transition: all 1s;
+}
+.headSculpture .img{
+    transform: translate(0,0);
+}
+.headSculpture p {
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 15px;
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    background-color: pink;
+    border-radius: 15px;
+    color: #fff;
+    transform: translate(200px,0);
+    transition: all 1s;
+}
+.headSculpture .opacity{
+    transform: translate(0,0);
+}
+
+.option,
+.option ul li {
+    width: 100%;
+}
+
+.option ul {
+    padding: 15px 0;
+}
+
+.option ul li {
+    display: flex;
+    align-items: center;
+    width:195px;
+    margin-top: 15px;
+    padding-left:25px;
+    cursor: pointer;
+    color: #D0D1D7;
+    transform: translateZ(0);
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.4s;
+    transition: all 1s;
+}
+.option ul li:nth-child(1),.option ul li:nth-child(3),.option ul li:nth-child(5){
+    transform: translate(-200px,0);
+}
+.option ul li:nth-child(2),.option ul li:nth-child(4){
+    transform: translate(200px,0);
+}
+.sidebar .option ul li.li{
+    transform: translate(0,0);
+}
+.option ul li:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: pink;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.option ul li:hover,
+.option ul li:focus,
+.option ul li:active {
+    color: #ffffff;
+}
+.option ul li a {
+    color: #D0D1D7;
+    text-decoration: none;
+}
+.option ul li:hover:before,
+.option ul li:focus:before,
+.option ul li:active:before {
+    transform: scaleX(1);
+}
+
+.option ul li img {
+    width: 25px;
+    height: 25px;
+}
+
+.option ul li p {
+    width: 145px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    padding-left: 15px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+#banner{
+    height: 100%;
+    width:100%;
+    text-align: center;
+    overflow:scroll;
+    height: 100vh; /* 设置容器高度为视口高度 */
+    overflow-y: scroll; /* 允许垂直滚动 */
+}
+.sidebar{
+    height: 100%;
+    width:100%;
+    text-align: center;
+    overflow:scroll;
+}
+.banner2 h2{
+    margin-top:40px;
+    font-family:Impact;
+    font-weight: 70%;
+    font-size: 4rem;
+    color:#fff;
+    letter-spacing: 4px;
+}
+.wenzi{
+    color:#D0D1D7;
+}
+.tishi ol li{
+    text-align: left;
+}
+#home-posts {
+    margin: auto;
+    margin-left: 500px;
+  
+}
+#home-posts .page-current {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: left;
+    width: 100%;
+}
+#home-posts .page-current .current {
+    border-radius: 5px;
+    color: #da0a51;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 7px;
+    padding: 5px;
+    width: 35px;
+}
+#home-posts .page-current .page-num,
+#home-posts .page-current .page-omit {
+    border-radius: 5px;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 7px;
+    padding: 5px;
+    width: 35px;
+}
+#home-posts .page-current a {
+    color: #999;
+}
+#home-posts .post {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #d9d9d980;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+#home-posts .post .category-and-date {
+    color: #5c6b72;
+    margin-top: 15px;
+    text-align: left;
+    width: 100%;
+}
+#home-posts .post P,
+#home-posts .post h3 {
+   text-align: left;
+   
+}
+#home-posts .post .category-and-date .category {
+    display: inline-block;
+    margin-right: 25px;
+}
+#home-posts .post .category-and-date .category a,
+#archives a,
+#archives .tag-icon,
+#archives .item-time,
+#archives .categories-tags span a:hover .icon,
+.article .info a {
+    color: #5c6b72;
+}
+
+#home-posts .post .category-and-date .date,
+#archives .tags,
+#menu #desktop-menu a span {
+    display: inline-block;
+}
+.bas {
+    display: inline-block; /* 使元素成为行内块元素 */
+    font-size: 60px;
+    color: #66afef;
+    text-align: center;
+    margin-left: 22%;
+}
+#home-posts.post font{
+    text-align: center;
+}
+#home-posts .post .post-tags .tag {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#home-posts .post .post-tags a {
+    font-size: 14px;
+}
+
+#home-posts .post-title {
+    color: #66afef;
+    text-align: center;
+}
+#home-posts .post:hover {
+    box-shadow: 0 0 5px #d9d9d9;
+    transform: translate(-5px, -5px);
+}
+#home-posts-wrap {
+    background: transparent;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+} #home-posts {
+    margin-right: 50px;
+    width: 850px;
+}
+#home-posts .post {
+    margin-bottom: 25px;
+    padding: 50px;
+}
+#home-posts .post .description {
+    padding: 20px 0;
+}
+#home-posts-wrap {
+    max-width: 1200px;
+}
+#home-posts .post .go-post {
+    background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%);
+    border: 0;
+    border-radius: 20px 0;
+    bottom: -5px;
+    box-shadow: 2px 2px 10px 0 #ffbbf47a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 24px;
+    position: absolute;
+    right: -5px;
+    transition: box-shadow 0.25s ease-out, right 0.25s ease-out;
+}
+#home-posts .post .go-post:hover {
+    box-shadow: -2px -2px 10px 0 #9abbf77a;
+    right: -7px;
+}
+.go-post:hover {
+    opacity: 1;
+}
+.banner {
+    width: 200%;
+    max-width:100%;
+    box-shadow: 0px 15px 40px #b6354e;
+    border-radius: 15px;
+    display: flex; 
+    flex-direction: column;
+    overflow: auto; /* 允许滚动 */
+    height: 100vh; /* 设置高度为视口高度的80% */
+    background-image: url("/images/壁纸2.jpg");
+  }
+  /* 模态框背景 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 1000; /* 确保模态框在最上层 */
+    left: 0;
+    top: 0;
+    width: 100%;
+
+
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  }
+  
+  /* 模态框内容 */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 居中显示 */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* 宽度可调整 */
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s;
+    position: fixed; /* 或 absolute，取决于布局需求 */
+    z-index: 1050;
+
+  }
+  .modal-content p{
+    text-align: left;
+  }
+  /* 关闭按钮 */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* 模态框按钮样式 */
+  .modal-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* 动画效果 */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  /* modal.css */
+
+/* 联系方式按钮样式 */
+.open-contact {
+    background-color: #4CAF50; /* 绿色背景 */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .open-contact:hover {
+    background-color: #45a049; /* 深绿色背景 */
+  }
+  
+  /* 联系方式模态框内容 */
+  #contactModal .modal-content {
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    animation: fadeIn 0.5s;
+  }
+  #b
+  #contactModal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  #contactModal .modal-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  #contactModal .modal-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* 关闭按钮样式 */
+  #contactModal .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #contactModal .close:hover,
+  #contactModal .close:focus {
+    color: black;
+    text-decoration: none;
+  }
+  /* modal.css */
+
+/* 联系方式模态框内容 */
+#contactModal .modal-content {
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 400px;
+  animation: fadeIn 0.5s;
+}
+
+#contactModal h2 {
+  text-align:left;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* 关闭按钮样式 */
+#contactModal .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contactModal .close:hover,
+#contactModal .close:focus {
+  color: black;
+  text-decoration: none;
+}
+/* music-player.css */
