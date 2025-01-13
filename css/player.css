@@ -5,12 +5,22 @@
 }
 
 /* 播放器位置 */
-.music-player {
-    position: relative;
-margin-left: 35%;
+    .music-player {
+        position: relative;
+        text-align:center;
+        left: 35%;
+    }
 
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)  {
+    /* 当屏幕宽度小于等于768px时应用的样式 */
+    .music-player {
+        position: relative;
+        text-align:center;
+        left: 30%;
+    
+    }
 }
-
 /* 歌曲列表 */
 
 .music-player__list {

@@ -15,6 +15,7 @@ ul {
 }
 
 #wrapper {
+    position: relative;
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -173,6 +174,29 @@ ul {
     height: 100vh; /* 设置容器高度为视口高度 */
     overflow-y: scroll; /* 允许垂直滚动 */
 }
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* 当屏幕宽度小于等于768px时应用的样式 */
+    #banner{
+        position: relative;
+        left: 10%;
+    
+    }
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)  {
+        #home-posts {
+            margin-left: 30%!important;
+            width: 700px!important;
+            
+        }
+      
+    }
+}
+
+@media (max-width: 768px) {
+    #home-posts {
+        margin-left: 10%;
+    }
+}
+
 .sidebar{
     height: 100%;
     width:100%;
@@ -195,9 +219,17 @@ ul {
 }
 #home-posts {
     margin: auto;
-    margin-left: 500px;
-  
-}
+    margin-left: 500px;}
+    @media screen and (max-width: 768px) {
+        /* 当屏幕宽度小于等于768px时应用的样式 */
+        #home-posts  {
+            position: relative;
+
+            left: 10%;
+        
+        }
+    }
+
 #home-posts .page-current {
     align-items: center;
     display: flex;
@@ -271,7 +303,8 @@ ul {
     font-size: 60px;
     color: #66afef;
     text-align: center;
-    margin-left: 22%;
+    margin-left: 25%;
+    
 }
 #home-posts.post font{
     text-align: center;
@@ -354,7 +387,15 @@ ul {
     top: 0;
     width: 100%;
 
-
+    body {
+        transition: transform 0.3s ease;
+        overflow-x: hidden;
+        zoom: 100%;
+        min-zoom: 100%;
+        max-zoom: 100%;
+        transform: scale(1);
+        transform-origin: 0 0;
+    }
     background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
   }
   
